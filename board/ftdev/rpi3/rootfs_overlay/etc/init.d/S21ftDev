@@ -1,0 +1,16 @@
+#! /bin/sh
+
+#/root/QmlTestApplication --platform eglfs
+modprobe mcp251x
+modprobe spi-bcm2835
+
+modprobe i2c-dev
+modprobe i2c-bcm2835
+
+lsmod
+
+/sbin/ip link set can0 up type can bitrate 500000 
+
+ifconfig
+
+

@@ -1,0 +1,30 @@
+#---> Boot
+kernel=zImagen
+disable_overscan=1
+boot_delay=0
+enable_uart=1
+disable_splash=1
+
+#--> OverClock
+#sdram_freq=700
+#initial_turbo=1
+#force_turbo=1
+#over_voltage=6
+#arm_freq=1400
+#core_freq=600
+
+hdmi_group=2
+hdmi_force_hotplug=1
+hdmi_mode=87
+
+max_framebuffer_height=1920
+config_hdmi_boost=10
+hdmi_timings=1080 1 26 4 50 1920 1 8 2 6 0 0 0 60 0 135580000 3
+display_rotate=0
+disable_overscan=0
+
+#za motor
+
+dtparam=spi=on
+dtoverlay=mcp2515-can0,oscillator=16000000,interrupt=25
+dtoverlay=spi0-hw-cs
